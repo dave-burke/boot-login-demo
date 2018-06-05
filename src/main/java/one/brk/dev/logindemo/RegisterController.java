@@ -1,5 +1,7 @@
 package one.brk.dev.logindemo;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,9 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/register")
 public class RegisterController {
 
+	private static final Logger LOG = LoggerFactory.getLogger(RegisterController.class);
+
 	@GetMapping
 	public String get() {
-		return "register.html";
+		LOG.info("Loading registration page");
+		return "register";
 	}
 
 }

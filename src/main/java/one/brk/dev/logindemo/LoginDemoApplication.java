@@ -20,6 +20,7 @@ public class LoginDemoApplication extends WebSecurityConfigurerAdapter implement
 		http
 			.authorizeRequests()
 				.antMatchers("/resources/**").permitAll()
+				.antMatchers("/register").permitAll()
 				.anyRequest().authenticated()
 				.and()
 			.formLogin().loginPage("/login")
