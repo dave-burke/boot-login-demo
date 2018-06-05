@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -15,6 +16,12 @@ public class RegisterController {
 	@GetMapping
 	public String get() {
 		LOG.info("Loading registration page");
+		return "register";
+	}
+
+	@PostMapping
+	public String post() {
+		LOG.info("Submitting registration");
 		return "register";
 	}
 
