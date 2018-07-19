@@ -29,7 +29,7 @@ public class LoginDemoApplication extends WebSecurityConfigurerAdapter implement
 			.formLogin().loginPage("/login")
 				.permitAll()
 				.and()
-			.logout();
+			.logout().permitAll();
 	}
 
 	@Override
